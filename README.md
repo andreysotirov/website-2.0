@@ -2,3 +2,6 @@
 
 Spring Boot Project 
 
+* Bootstrap Templates 
+* Spring Security
+* Spring Data
