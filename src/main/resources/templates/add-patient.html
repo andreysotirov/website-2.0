@@ -29,13 +29,13 @@
         <div class="logo">
             <a class="simple-text logo-mini">
                 <div class="logo-image-small">
-                    <img src="assets-dashboard/img/logo-small.png">
+                    <img th:src="@{/assets-dashboard/img/logo-small.png}">
                 </div>
             </a>
             <a class="simple-text logo-normal">
-                dr sotirov
+                Dr Sotirov
                 <!-- <div class="logo-image-big">
-                  <img src="assets-dashboard/img/logo-big.png">
+                  <img src="/assets-dashboard/img/logo-big.png">
                 </div> -->
             </a>
         </div>
@@ -70,7 +70,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" >Add Patient</a>
+                    <a class="navbar-brand">Add Patient</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,6 +95,7 @@
                     </div>
                     <div class="card-body">
                         <form action="#" method="post" th:action="@{/dashboard/add-patient}" th:object="${patient}">
+                            <input type="hidden" th:field="*{id}"/>
                             <div class="row">
                                 <div class="col-md-6 pr-1">
                                     <div class="form-group">
@@ -139,14 +140,15 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label>Price</label>
-                                        <input type="number" step="0.01" th:required="required" th:field="*{patientPrice}"
+                                        <input type="number" th:required="required"
+                                               th:field="*{patientPrice}"
                                                class="form-control" placeholder="Price">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="update ml-auto mr-auto">
-                                    <button type="submit" class="btn btn-primary btn-round">Add Patient</button>
+                                    <button type="submit" class="btn btn-primary btn-round">Save</button>
                                 </div>
                             </div>
 

@@ -107,9 +107,15 @@ public class Controller {
 
     @GetMapping("/dashboard/update-patient")
     public String updatePatient(@RequestParam("id") int id, Model model) {
+        //Look at optional isPresent()
+        Patient patientEntity = null;
 
         Optional<Patient> optionalEntity = servicePatient.findById(id);
-        Patient patientEntity = optionalEntity.get();
+        if (optionalEntity.isPresent()) {
+
+            patientEntity = optionalEntity.get();
+
+        }
 
         model.addAttribute("patient", patientEntity);
 
@@ -119,8 +125,13 @@ public class Controller {
     @GetMapping("/dashboard/update-expense")
     public String updateExpense(@RequestParam("id") int id, Model model) {
 
+        Expense expenseEntity = null;
+
         Optional<Expense> optionalEntity = serviceExpense.findById(id);
-        Expense expenseEntity = optionalEntity.get();
+
+        if (optionalEntity.isPresent()) {
+            expenseEntity = optionalEntity.get();
+        }
 
         model.addAttribute("expense", expenseEntity);
 

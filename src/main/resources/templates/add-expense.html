@@ -29,13 +29,13 @@
         <div class="logo">
             <a class="simple-text logo-mini">
                 <div class="logo-image-small">
-                    <img src="assets-dashboard/img/logo-small.png">
+                    <img th:src="@{/assets-dashboard/img/logo-small.png}">
                 </div>
             </a>
             <a class="simple-text logo-normal">
-                dr sotirov
+                Dr Sotirov
                 <!-- <div class="logo-image-big">
-                  <img src="assets-dashboard/img/logo-big.png">
+                  <img src="/assets-dashboard/img/logo-big.png">
                 </div> -->
             </a>
         </div>
@@ -95,6 +95,7 @@
                     </div>
                     <div class="card-body">
                         <form method="post" th:action="@{/dashboard/add-expense}" th:object="${expense}">
+                            <input type="hidden" th:field="*{expenseId}"/>
                             <div class="row">
                                 <div class="col-md-6 pr-1">
                                     <div class="form-group">
@@ -132,7 +133,7 @@
                             </div>
                             <div class="row">
                                 <div class="update ml-auto mr-auto">
-                                    <button type="submit" class="btn btn-primary btn-round">Add Expense</button>
+                                    <button type="submit" class="btn btn-primary btn-round">Save</button>
                                 </div>
                             </div>
 

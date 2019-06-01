@@ -19,7 +19,6 @@ public class ServiceExpenseImpl implements ServiceExpense {
         return expenseRepo.findAll();
     }
 
-    //LOOK IF IT IS WORKING THAT WAY!!!! IMPORTANT!!!
     @Override
     public Optional<Expense> findById(int id) {
 

@@ -19,7 +19,6 @@ public class ServicePatientImpl implements ServicePatient {
         return patientRepo.findAll();
     }
 
-    //LOOK IF IT IS WORKING THAT WAY!!!! IMPORTANT!!!
     @Override
     public Optional<Patient> findById(int id) {
         return patientRepo.findById(id);
