@@ -1,4 +1,4 @@
-package com.andreysotirov.website.controller;
+package com.andreysotirov.website.controllers;
 
 import com.andreysotirov.website.entity.Patient;
 import com.andreysotirov.website.service.ServicePatient;
