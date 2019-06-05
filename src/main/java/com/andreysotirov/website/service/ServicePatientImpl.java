@@ -3,12 +3,13 @@ package com.andreysotirov.website.service;
 import com.andreysotirov.website.dao.PatientRepo;
 import com.andreysotirov.website.entity.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-@org.springframework.stereotype.Service
+@Service
 public class ServicePatientImpl implements ServicePatient {
 
     @Autowired

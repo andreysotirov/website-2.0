@@ -3,12 +3,13 @@ package com.andreysotirov.website.service;
 import com.andreysotirov.website.dao.ExpenseRepo;
 import com.andreysotirov.website.entity.Expense;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-@org.springframework.stereotype.Service
+@Service
 public class ServiceExpenseImpl implements ServiceExpense {
 
     @Autowired
